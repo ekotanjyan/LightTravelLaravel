@@ -1,0 +1,58 @@
+.leftbar{
+	background: #ccc;
+}
+.content{
+	background: #eee;
+}
+.img_info{
+	text-align: center;
+	margin-top: 5px;
+}
+
+.add_img{
+	text-align: right;
+	background: #eee;
+}
+
+.messages{
+	margin-top: 10px;
+}
+
+.header{
+	background: #aaa;
+}
+
+.text_area{
+	height: 160px !important;
+	width: 50%;
+}
+
+.input{
+	width: 50% !important;
+}
+.top{
+	text-align: center;
+	height: 30px;
+}
+
+.top_img{
+	text-align: left !important;
+}
+
+input[type='submit']{
+	margin-top: 10px;
+}
+
+.display{
+	display: block;
+	width: 100px;
+	height: 30px;
+}
+
+
+.div_info{
+	text-align: center;
+}
+
+
+
