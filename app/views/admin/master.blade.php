@@ -35,6 +35,13 @@
 <script type="text/javascript" src="{{URL::asset('bootstrap/js/bootstrap.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('bootstrap/js/bootstrap-datepicker.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('assets/admin/js/admin.js')}}"></script>
+<script>
+    $(document).ready(function (){
+        $('.datepickers').datepicker();
+
+        
+    });
+</script>
 </body>
 </html>
 @show

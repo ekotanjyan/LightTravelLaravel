@@ -24,7 +24,7 @@ class GalleryController extends BaseController {
 			$gallery = Gallery::all();
 			return View::make('admin.gallery.gallery')->with('gallery_img',$gallery)->with('error_gallery',$error);
 		}else{
-			$path = 'public/uploadgallery';
+			$path = 'uploadgallery';
 			$type = Input::file('image')->getClientOriginalExtension();
 			$imgName = rand(1111111,9999999).time().".".$type;
 			$upload = Input::file('image')->move($path,$imgName);
@@ -46,8 +46,8 @@ class GalleryController extends BaseController {
 		$gallery = Gallery::find($id);
 		$img =  $gallery->img;
 		if(!empty($img)){
-			if(file_exists('public/uploadgallery/'.$img)){
-				unlink('public/uploadgallery/'.$img);
+			if(file_exists('uploadgallery/'.$img)){
+				unlink('uploadgallery/'.$img);
 			}
 		}
 		$gallery->delete();
@@ -81,7 +81,7 @@ class GalleryController extends BaseController {
 					unlink('public/uploadgallery/'.$img);
 				}
 			}
-			$path = 'public/uploadgallery';
+			$path = 'uploadgallery';
 			$type = Input::file('image')->getClientOriginalExtension();
 			$imgName = rand(1111111,9999999).time().".".$type;
 			$upload = Input::file('image')->move($path,$imgName);

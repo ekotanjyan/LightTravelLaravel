@@ -41,7 +41,7 @@ class AddToursController extends BaseController {
 				print_r($error);
 			echo "</pre>";
 		}else{
-			$path = 'public/uploadtours';
+			$path = 'uploadtours';
 			$type = Input::file('image')->getClientOriginalExtension();
 			$imageName = rand(1111111,9999999).time().".".$type;
 			$upload = Input::file('image')->move($path,$imageName);
@@ -108,8 +108,8 @@ class AddToursController extends BaseController {
 			if(!empty(Input::file('image'))){
 				$tours = Tours::find($id);
 				$img_delete = $tours->img_url;
-				if(file_exists('public/uploadtours/'.$img_delete)){
-					unlink('public/uploadtours/'.$img_delete);
+				if(file_exists('uploadtours/'.$img_delete)){
+					unlink('uploadtours/'.$img_delete);
 				}
 				$type = Input::file('image')->getClientOriginalExtension();
 				$imgName = rand(1111111,9999999).time().".".$type;
@@ -164,7 +164,7 @@ class AddToursController extends BaseController {
 
 
 	public function pricesearch() {
-		$index = Index::all();
+		$index = SliderImages::all();
 		$country = Country::all();
 		$city = City::all();
 		$gallery = Gallery::all();

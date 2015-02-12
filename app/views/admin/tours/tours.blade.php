@@ -20,9 +20,9 @@
 				<label for="description">Add description</label>
 				<input id="description" class="form-control input" type="text" name="description">
 				<label for="start_date">Add start date</label>
-				<input class="form-control input" id="start_date" type="text" name="start_date" />
+				<input class="form-control input datepickers" type="text" name="start_date" />
 				<label for="end_date">Add end date</label>
-				<input class="form-control input" id="end_date" type="text" name="end_date">
+				<input class="form-control input datepickers" type="text" name="end_date">
 				<label for="country">Add country</label>
 				<select id="country" class="form-control input" name="country">
 					<?php foreach ($country as $value): ?>

@@ -29,11 +29,11 @@ class AboutController extends BaseController {
 		if(Input::file('image')){
 			$about_text = About::find('1');
 			if(!empty($about_text->img_url)){
-				if(file_exists('public/uploadabout'.$about_text->img_url)){
-					unlink('public/uploadabout'.$about_text->img_url);
+				if(file_exists('uploadabout/'.$about_text->img_url)){
+					unlink('uploadabout/'.$about_text->img_url);
 				}
 			}
-			$path = 'public/uploadabout';
+			$path = 'uploadabout';
 			$type = Input::file('image')->getClientOriginalExtension();
 			$img_name = rand(1111111,9999999).time().".".$type;
 			$upload = Input::file('image')->move($path,$img_name);

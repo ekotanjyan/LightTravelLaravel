@@ -41,8 +41,8 @@ class AdminController extends BaseController {
 	}
 
 	public function slider(){
-		$index = Index::all();
-		return View::make('admin.slider.slider')->with('slider',$index);
+		$sliderImages = SliderImages::all();
+		return View::make('admin.slider.slider')->with('slider',$sliderImages);
 	}
 
 	public function upload(){
@@ -59,15 +59,16 @@ class AdminController extends BaseController {
 		$validator = Validator::make($input_value,$input_check);
 		if($validator->fails()){
 			$error = $validator->messages()->toArray();
-			$index = Index::all();
+			$index = SliderImages::all();
 			return View::make('admin.slider.sliderAdd')->with('slider',$index)->with('error',$error);
 		}else{
 			$type = Input::file('image')->getClientOriginalExtension();
 			$fileName = rand(1111111,9999999).time().".".$type;
-			$path = 'public/upload';
+			$path = 'upload';
 			$upload = Input::file('image')->move($path, $fileName);
+           // var_dump($upload);die;
 			if($upload){
-				$index = new Index();
+				$index = new SliderImages();
 				$index->img_url = $fileName;
 				$index->name = Input::get('name');
 				$index->description = Input::get('description');
@@ -85,7 +86,7 @@ class AdminController extends BaseController {
 
 
 	public function delete_img($id){
-		$index = Index::find($id);
+		$index = SliderImages::find($id);
 		if(file_exists('public/upload/'.$index->img_url)){
 			unlink('public/upload/'.$index->img_url);
 		}
@@ -130,7 +131,7 @@ class AdminController extends BaseController {
 				$top->save();
 				return Redirect::to('top').with('update_img','save');
 			}else{
-				$path = 'public/uploadtop';
+				$path = 'uploadtop';
 				$type = Input::file('image')->getClientOriginalExtension();
 				$imgName = rand(1111111,9999999).time().".".$type;
 				$upload = Input::file('image')->move($path,$imgName);
@@ -149,8 +150,8 @@ class AdminController extends BaseController {
 
 	public function deleteslide($id){
 		$top = Top::find($id);
-		if(file_exists('public/uploadtop/'.$top->img_url)){
-			unlink('public/uploadtop/'.$top->img_url);
+		if(file_exists('uploadtop/'.$top->img_url)){
+			unlink('uploadtop/'.$top->img_url);
 		}
 		$top->delete();
 		return Redirect::to('top');
@@ -179,7 +180,7 @@ class AdminController extends BaseController {
 		}else{
 			$type = Input::file('image')->getClientOriginalExtension();
 			$imgName = rand(1111111,9999999).time().".".$type;
-			$path = 'public/uploadtop';
+			$path = 'uploadtop';
 			$upload = Input::file('image')->move($path,$imgName);
 			if($upload){
 				$top = new Top();
@@ -228,11 +229,11 @@ class AdminController extends BaseController {
 			$tab = TabCategoris::find($id);
 			$img_delete = $tab->img_url;
 			if(!empty($img_delete)){
-				if(file_exists('public/uploadtab/'.$img_delete)){
-					unlink('public/uploadtab/'.$img_delete);
+				if(file_exists('uploadtab/'.$img_delete)){
+					unlink('uploadtab/'.$img_delete);
 				}
 			}
-			$path = 'public/uploadtab';
+			$path = 'uploadtab';
 			$type = Input::file('image')->getClientOriginalExtension();
 			$imgName = rand(1111111,9999999).time().".".$type;
 			$upload = Input::file('image')->move($path,$imgName);

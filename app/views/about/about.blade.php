@@ -8,16 +8,13 @@
   <div class="container_12">
       <div class="grid_9">
         <div class="">
-          <?php if (isset($about_text)): ?>
+          <?php if (isset($about)): ?>
             
-            <?php foreach ($about_text as $value): ?>
-              <h3>{{$value->title}}</h3>
-              <div class="img_div"><img src="{{URL::asset('uploadabout/'.$value->img_url)}}" alt="" class="img_inner fleft"></div>
-              <p>{{$value->text}}</p>
+              <h3>{{$about->title}}</h3>
+              <div class="img_div"><img src="{{URL::asset('uploadabout/'.$about->img_url)}}" alt="" class="img_inner fleft"></div>
+              <p>{{$about->text}}</p>
+              <p>{{$about->full_text}}</p>
               <div class="clear"></div>
-              Duis ac iaculis odio, sed tristique arcu. Cras consequat semper augue. Praesent ut facilisis nisi. Pellentesque consequat felis leorew qwertil condimentumo placerat eros mollis vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent iaculis nisl mattis facilisis enim vitae dictumi magna. Pellentesque laoreet purus congue justo laoreet, blandit tempor leo molestie. Vivamus orci sem molestie actre pharetra non scelerisque sit amet orci. Nulla consequat neque pretium sagittis vulputate. Fusce dictum velit at diam facilisis consectetur. 
-            <?php endforeach ?>
-            
           <?php endif ?>
         </div>
       </div>
@@ -50,8 +47,7 @@
       </div>
       <div class="clear"></div>
       <div class="grid_9">
-      <p>{{$value->full_text}}</p>
-        
+
         
         <div class="clear"></div>
       </div>
