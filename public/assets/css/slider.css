@@ -4,7 +4,7 @@
 .slider-relative {
 	position:relative;
 	overflow: hidden;
-	margin-top: 71px;
+	/*margin-top: 71px;*/
 }
 
 
@@ -15,14 +15,13 @@
 
 .slider-block {
 	position:relative;
-	height: 724px;
+	/*height: 724px;*/
 	
 }
 .slider {
 	z-index:2;
 	overflow: visible !important;
-	height: 724px;
-
+	/*height: 724px;*/
 	position: relative;
 }
 

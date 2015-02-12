@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserTable extends Migration {
+class CreateTopTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,8 +12,12 @@ class CreateUserTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('top', function ($table) {
-		  $table->string('img_name',200);
+		Schema::create('top',function($table){
+			$table->increments('id');
+			$table->string('title');
+			$table->string('text');
+			$table->string('img_url');
+			$table->timestamps();
 		});
 	}
 
@@ -24,7 +28,7 @@ class CreateUserTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('top');
 	}
 
 }

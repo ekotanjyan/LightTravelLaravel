@@ -1,17 +1,20 @@
 @extends('main.master')
 @section('content')
-<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - August 05, 2013!</div>
-	<div class="container_12">
-		<div class="grid_12">
+<div class="content container-fluid" style="padding: 0">
+	<div class="container-fluid" style="padding: 0">
+
+		<div class="top_destination container-fluid" style="padding: 0">
 			<h3>Top Destinations</h3>
 		</div>
-		<div class="boxes">
+
+
+		<div class="boxes container-fluid" style="padding: 0">
 			<?php if (isset($top_img)): ?>
 				<?php foreach ($top_img as $value): ?>
 					
-				<div class="grid_4">
-					<figure>
-						<div><img src="{{URL::asset('uploadtop/'.$value->img_url)}}" alt=""></div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="">
+					<figure class="container-fluid" style="padding: 0">
+						<div class="container-fluid" style="padding: 0; height: 280px !important; width: 100% !important"><img src="{{URL::asset('uploadtop/'.$value->img_url)}}" alt="" style="width: 100% !important; height: 100% !important"></div>
 						<figcaption>
 							<h3>{{$value->title}}</h3>
 							{{$value->text}}
@@ -23,6 +26,10 @@
 				<?php endforeach ?>
 			<?php endif ?>
 		</div>
+
+
+
+
 				<div class="grid_8">
 					 <div id="tabs">
 	<ul>
