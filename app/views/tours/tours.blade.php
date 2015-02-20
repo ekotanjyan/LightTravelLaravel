@@ -1,15 +1,14 @@
 @extends('main.master')
 
 @section('tours_content')
-<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - August 05, 2013!</div>
-  <div class="container_12">
-    <div class="grid_9">
+  <div class="container-fluid" style="padding: 0; margin: 50px">
+    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" style="padding: 0">
       <h3>Special Tours</h3>
-      <div class="tours">
+      <div class="tours container-fluid" style="padding: 0">
         <?php if (isset($tours)): ?>
           <?php foreach ($tours as $value): ?>
-      <div class="grid_4 alpha">
-        <div class="tour">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" style="padding: 0">
+        <div class="tour container-fluid" style="padding: 0">
             <div class="img_tours"><img src="{{URL::asset('uploadtours/'.$value->img_url)}}" alt="" class="img_inner fleft"></div>
             <div class="extra_wrapper">
             <p class="text1">{{$value->title}}</p>
@@ -28,7 +27,7 @@
           <?php endforeach ?>
         <?php endif ?>
 
-     <!-- <div class="grid_4 alpha">
+     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         <div class="tour">
           <img src="{{URL::asset('assets/images/page4_img2.jpg')}}" alt="" class="img_inner fleft">
           <div class="extra_wrapper">
@@ -38,7 +37,7 @@
             <a href="#" class="btn">Details</a>
           </div>
         </div>
-      </div> -->
+      </div>
       <!-- <div class="grid_4 alpha">
         <div class="tour">
           <img src="{{URL::asset('assets/images/page4_img3.jpg')}}" alt="" class="img_inner fleft">
@@ -85,7 +84,7 @@
       </div> -->
       </div>
     </div>
-    <div class="grid_3">
+    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3" style="padding: 0">
       
       
         <h3>Search Tours</h3>
@@ -111,7 +110,7 @@
                   <input class="form-control" type="text" name="price_search_end">
               </label>
               <div class="clear"></div>
-             <input type="submit" name="submit_search">
+             <input type="submit" name="submit_search" class="btn">
             </form> 
         </div>
         <div class="clear"></div>
@@ -120,33 +119,4 @@
 </form>
 @stop
 
-@section('tours_bottom')
-<div class="bottom_block">
-  <div class="container_12">
-    <div class="grid_2 prefix_2">
-      <ul>
-        <li><a href="#">FAQS Page</a></li>
-        <li><a href="#">People Say</a></li>
-      </ul>
-    </div>
-    <div class="grid_2">
-      <ul>
-        <li><a href="#">Useful links</a></li>
-        <li><a href="#">Partners</a></li>
-      </ul>
-    </div>
-    <div class="grid_2">
-      <ul>
-        <li><a href="#">Insurance</a></li>
-        <li><a href="#">Family Travel</a></li>
-      </ul>
-    </div>
-    <div class="grid_2">
-      <h4>Contact Us:</h4>
-      TEL: 1-800-234-5678<br><a href="#">info@demolink.org</a>
-     
-    </div>
-    <div class="clear"></div>
-    </div>
-  </div>
-@stop
+

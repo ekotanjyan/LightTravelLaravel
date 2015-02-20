@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('gallery_content')
-	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 content">Gallery</div>
+	<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">Gallery</div>
 	<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 content">
 		<?php if (isset($gallery_img)): ?>
 			<?php foreach ($gallery_img as $value): ?>
@@ -13,7 +13,7 @@
 							<button class="btn btn-default"><a href="{{URL::to('/deletegallery/'.$value->id)}}">Delete</a></button>
 							<button class="btn btn-default"><a href="{{URL::to('/editgallery/'.$value->id)}}">Edit</a></button>
 						</div>
-					</div>					
+					</div>
 				<?php endif ?>
 			<?php endforeach ?>
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 content">

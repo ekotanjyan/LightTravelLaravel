@@ -1,28 +1,25 @@
-
-
 /*Slider*/
 .slider-relative {
-	position:relative;
-	overflow: hidden;
-	/*margin-top: 71px;*/
+    position:relative;
+    overflow: hidden;
+    margin-top: 50px;
 }
 
-
 .items {
-	display: none;	
-	overflow: hidden;
+    display: none;
+    overflow: hidden;
 }
 
 .slider-block {
-	position:relative;
-	/*height: 724px;*/
-	
+    position:relative;
+    height: 724px;
+
 }
 .slider {
-	z-index:2;
-	overflow: visible !important;
-	/*height: 724px;*/
-	position: relative;
+    z-index:2;
+    overflow: visible !important;
+    height: 724px;
+    position: relative;
 }
 
 
@@ -61,26 +58,26 @@ z-index: 999;
 
 
 a.prev, a.next {
-	width: 56px;
-	background: url(../images/prevnext.png) 0 0 no-repeat;
-	height: 112px;
-	position: absolute;
-	display: block;
-	bottom: 49px;
-	z-index: 999;
-	left: 45px;
+    width: 56px;
+    background: url(../images/prevnext.png) 0 0 no-repeat;
+    height: 112px;
+    position: absolute;
+    display: block;
+    bottom: 49px;
+    z-index: 999;
+    left: 45px;
 
 }
 
 a.next {
-	left: 101px;
-	width: 57px;
-	background-position: right bottom;
+    left: 101px;
+    width: 57px;
+    background-position: right bottom;
 
 }
 
 a.next:hover,a.prev:hover  {
-	opacity: 0.8;
+    opacity: 0.8;
 }
 
 
@@ -112,28 +109,28 @@ a.next:hover,a.prev:hover  {
 
 
 .slider .banner{
-	top: 274px;
-	left: 0px;
-	position: absolute;
-	font-family: 'Pathway Gothic One', sans-serif;;
-	color: #fff;	
-	text-transform: uppercase;
+    top: 274px;
+    left: 0px;
+    position: absolute;
+    font-family: 'Pathway Gothic One', sans-serif;;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .slider .banner div {
-	font-size: 28px;
-	line-height: 65px;
-	color: #263555;
-	padding: 4px 19px 6px 19px;
-	background: #fff;
-	display: inline-block;
+    font-size: 28px;
+    line-height: 65px;
+    color: #263555;
+    padding: 4px 19px 6px 19px;
+    background: #fff;
+    display: inline-block;
 }
 
 .slider .banner span {
-	padding: 3px 15px 7px 19px;
-	display: inline-block;
-	font-size: 43px;
-	line-height: 64px;
-	background: #38afe5;
+    padding: 3px 15px 7px 19px;
+    display: inline-block;
+    font-size: 43px;
+    line-height: 64px;
+    background: #38afe5;
 }
 
