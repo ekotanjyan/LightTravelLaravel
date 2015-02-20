@@ -198,14 +198,18 @@
 
     </div>
 
-    <div class="soc_icons container-fluid">
-        <div>
-            <a href="" class="tw"></a>
-            <a href="" class="fb"></a>
-            <a href="" class="g+"></a>
-            <a href="" class="in"></a>
+    <div class="soc_icons container-fluid" style="margin-top: 20px">
+        <div class="col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="socials col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
         </div>
+        <div class="col-sm-4 col-md-4 col-lg-4"></div>
     </div>
+
+
 
 	<!--<div class="container_12">
 	<div class="grid_12">
